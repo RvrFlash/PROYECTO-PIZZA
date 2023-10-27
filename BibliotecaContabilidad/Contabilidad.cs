@@ -26,6 +26,10 @@ namespace BibliotecaContabilidad
         public int[] StockIngredientes { get => stockIngredientes; set => stockIngredientes = value; }
         public double Total { get => total; set => total = value; }
         public byte[] TotalPedidos { get => totalPedidos; set => totalPedidos = value; }
+        public byte[] PorcionesPepperoni { get => porcionesPepperoni; set => porcionesPepperoni = value; }
+        public byte[] PorcionesHawaiiana { get => porcionesHawaiiana; set => porcionesHawaiiana = value; }
+        public byte[] PorcionesTresCarnes { get => porcionesTresCarnes; set => porcionesTresCarnes = value; }
+        public double[] Precios1 { get => precios; set => precios = value; }
         #endregion
 
         #region Métodos
@@ -35,7 +39,7 @@ namespace BibliotecaContabilidad
         {
             for (int i = 0; i < 3; i++)
             {
-                Total += pedido[i] * precios[i];
+                Total += pedido[i] * Precios1[i];
             }
 
             return Total;
@@ -47,9 +51,9 @@ namespace BibliotecaContabilidad
             byte[] misPizzas = new byte[7];
             for (int i = 0; i < 7; i++)
             {
-                misPizzas[i] = (byte)(pedido[0] * porcionesPepperoni[i]
-                    + pedido[1] * porcionesHawaiiana[i]
-                    + pedido[1] * porcionesTresCarnes[i]);
+                misPizzas[i] = (byte)(pedido[0] * PorcionesPepperoni[i]
+                    + pedido[1] * PorcionesHawaiiana[i]
+                    + pedido[1] * PorcionesTresCarnes[i]);
             }
 
             for (int i = 0; i < StockIngredientes.Length; i++)
@@ -71,9 +75,9 @@ namespace BibliotecaContabilidad
             byte[] misPizzas = new byte[7];
             for (int i = 0; i < 7; i++)
             {
-                misPizzas[i] = (byte)(pedido[0] * porcionesPepperoni[i]
-                    + pedido[1] * porcionesHawaiiana[i]
-                    + pedido[2] * porcionesTresCarnes[i]);
+                misPizzas[i] = (byte)(pedido[0] * PorcionesPepperoni[i]
+                    + pedido[1] * PorcionesHawaiiana[i]
+                    + pedido[2] * PorcionesTresCarnes[i]);
 
             }
             for (int i = 0; i < 7; i++)
@@ -83,12 +87,12 @@ namespace BibliotecaContabilidad
         }
 
         //Método para consultar el Stock total
-        public string[] ConsultarStock()
+        public byte[] ConsultarStock()
         {
-            string[] mostrarStock = new string[7];
-            for (int i = 0; i < StockIngredientes.Length; i++)
+            byte[] mostrarStock = new byte[7];
+            for (int i = 0; i < 7; i++)
             {
-                mostrarStock[i] = ingredientes[i] + ": " + stockIngredientes[i].ToString() + "\n";
+                mostrarStock[i] = (byte)stockIngredientes[i];
             }
             return mostrarStock;
         }

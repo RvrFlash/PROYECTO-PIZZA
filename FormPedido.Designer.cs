@@ -40,16 +40,32 @@
             this.lbOrdenHawaiiana = new System.Windows.Forms.Label();
             this.lbOrdenTresCarnes = new System.Windows.Forms.Label();
             this.lbPrecioTotal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPepperoni = new System.Windows.Forms.PictureBox();
+            this.btnHawaiiana = new System.Windows.Forms.PictureBox();
+            this.btnTresCarnes = new System.Windows.Forms.PictureBox();
+            this.btnNuevaOrden = new System.Windows.Forms.PictureBox();
+            this.btnOrdenar = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnContabilidad = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPepperoni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHawaiiana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTresCarnes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevaOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOrdenar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContabilidad)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose2
             // 
+            this.pbClose2.BackColor = System.Drawing.Color.DarkOrange;
             this.pbClose2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose2.Image = ((System.Drawing.Image)(resources.GetObject("pbClose2.Image")));
             this.pbClose2.Location = new System.Drawing.Point(1463, 12);
@@ -63,9 +79,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(919, 198);
+            this.pictureBox5.Location = new System.Drawing.Point(906, 276);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(247, 433);
+            this.pictureBox5.Size = new System.Drawing.Size(247, 371);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
@@ -73,9 +89,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1216, 198);
+            this.pictureBox6.Location = new System.Drawing.Point(1203, 276);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(247, 433);
+            this.pictureBox6.Size = new System.Drawing.Size(247, 371);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -83,9 +99,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(625, 198);
+            this.pictureBox4.Location = new System.Drawing.Point(612, 276);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(247, 433);
+            this.pictureBox4.Size = new System.Drawing.Size(247, 371);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 11;
             this.pictureBox4.TabStop = false;
@@ -104,9 +120,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(31, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 79);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(568, 693);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -128,59 +144,156 @@
             // lbOrdenPepperoni
             // 
             this.lbOrdenPepperoni.AutoSize = true;
-            this.lbOrdenPepperoni.BackColor = System.Drawing.Color.White;
+            this.lbOrdenPepperoni.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbOrdenPepperoni.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrdenPepperoni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbOrdenPepperoni.Location = new System.Drawing.Point(483, 393);
+            this.lbOrdenPepperoni.Location = new System.Drawing.Point(481, 409);
             this.lbOrdenPepperoni.Name = "lbOrdenPepperoni";
-            this.lbOrdenPepperoni.Size = new System.Drawing.Size(36, 42);
+            this.lbOrdenPepperoni.Size = new System.Drawing.Size(33, 42);
             this.lbOrdenPepperoni.TabIndex = 18;
-            this.lbOrdenPepperoni.Text = "0";
+            this.lbOrdenPepperoni.Text = "-";
             // 
             // lbOrdenHawaiiana
             // 
             this.lbOrdenHawaiiana.AutoSize = true;
-            this.lbOrdenHawaiiana.BackColor = System.Drawing.Color.White;
+            this.lbOrdenHawaiiana.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbOrdenHawaiiana.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrdenHawaiiana.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbOrdenHawaiiana.Location = new System.Drawing.Point(483, 453);
+            this.lbOrdenHawaiiana.Location = new System.Drawing.Point(481, 464);
             this.lbOrdenHawaiiana.Name = "lbOrdenHawaiiana";
-            this.lbOrdenHawaiiana.Size = new System.Drawing.Size(36, 42);
+            this.lbOrdenHawaiiana.Size = new System.Drawing.Size(33, 42);
             this.lbOrdenHawaiiana.TabIndex = 18;
-            this.lbOrdenHawaiiana.Text = "0";
+            this.lbOrdenHawaiiana.Text = "-";
             // 
             // lbOrdenTresCarnes
             // 
             this.lbOrdenTresCarnes.AutoSize = true;
-            this.lbOrdenTresCarnes.BackColor = System.Drawing.Color.White;
+            this.lbOrdenTresCarnes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbOrdenTresCarnes.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrdenTresCarnes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbOrdenTresCarnes.Location = new System.Drawing.Point(483, 508);
+            this.lbOrdenTresCarnes.Location = new System.Drawing.Point(481, 519);
             this.lbOrdenTresCarnes.Name = "lbOrdenTresCarnes";
-            this.lbOrdenTresCarnes.Size = new System.Drawing.Size(36, 42);
+            this.lbOrdenTresCarnes.Size = new System.Drawing.Size(33, 42);
             this.lbOrdenTresCarnes.TabIndex = 18;
-            this.lbOrdenTresCarnes.Text = "0";
+            this.lbOrdenTresCarnes.Text = "-";
             // 
             // lbPrecioTotal
             // 
             this.lbPrecioTotal.AutoSize = true;
-            this.lbPrecioTotal.BackColor = System.Drawing.Color.White;
+            this.lbPrecioTotal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbPrecioTotal.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrecioTotal.ForeColor = System.Drawing.Color.Black;
-            this.lbPrecioTotal.Location = new System.Drawing.Point(470, 655);
+            this.lbPrecioTotal.Location = new System.Drawing.Point(390, 693);
             this.lbPrecioTotal.Name = "lbPrecioTotal";
             this.lbPrecioTotal.Size = new System.Drawing.Size(49, 43);
             this.lbPrecioTotal.TabIndex = 18;
             this.lbPrecioTotal.Text = "$0";
             // 
-            // button1
+            // btnPepperoni
             // 
-            this.button1.Location = new System.Drawing.Point(722, 674);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPepperoni.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPepperoni.Image = ((System.Drawing.Image)(resources.GetObject("btnPepperoni.Image")));
+            this.btnPepperoni.Location = new System.Drawing.Point(612, 673);
+            this.btnPepperoni.Name = "btnPepperoni";
+            this.btnPepperoni.Size = new System.Drawing.Size(247, 63);
+            this.btnPepperoni.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPepperoni.TabIndex = 19;
+            this.btnPepperoni.TabStop = false;
+            this.btnPepperoni.Click += new System.EventHandler(this.btnPepperoni_Click);
+            // 
+            // btnHawaiiana
+            // 
+            this.btnHawaiiana.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHawaiiana.Image = ((System.Drawing.Image)(resources.GetObject("btnHawaiiana.Image")));
+            this.btnHawaiiana.Location = new System.Drawing.Point(906, 673);
+            this.btnHawaiiana.Name = "btnHawaiiana";
+            this.btnHawaiiana.Size = new System.Drawing.Size(247, 63);
+            this.btnHawaiiana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHawaiiana.TabIndex = 19;
+            this.btnHawaiiana.TabStop = false;
+            this.btnHawaiiana.Click += new System.EventHandler(this.btnHawaiiana_Click);
+            // 
+            // btnTresCarnes
+            // 
+            this.btnTresCarnes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTresCarnes.Image = ((System.Drawing.Image)(resources.GetObject("btnTresCarnes.Image")));
+            this.btnTresCarnes.Location = new System.Drawing.Point(1203, 673);
+            this.btnTresCarnes.Name = "btnTresCarnes";
+            this.btnTresCarnes.Size = new System.Drawing.Size(247, 63);
+            this.btnTresCarnes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnTresCarnes.TabIndex = 19;
+            this.btnTresCarnes.TabStop = false;
+            this.btnTresCarnes.Click += new System.EventHandler(this.btnTresCarnes_Click);
+            // 
+            // btnNuevaOrden
+            // 
+            this.btnNuevaOrden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevaOrden.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaOrden.Image")));
+            this.btnNuevaOrden.Location = new System.Drawing.Point(91, 120);
+            this.btnNuevaOrden.Name = "btnNuevaOrden";
+            this.btnNuevaOrden.Size = new System.Drawing.Size(58, 58);
+            this.btnNuevaOrden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNuevaOrden.TabIndex = 20;
+            this.btnNuevaOrden.TabStop = false;
+            this.btnNuevaOrden.Click += new System.EventHandler(this.btnNuevaOrden_Click);
+            // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdenar.Image = global::PROYECTO_PIZZA.Properties.Resources.btnComprar;
+            this.btnOrdenar.Location = new System.Drawing.Point(232, 596);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(146, 78);
+            this.btnOrdenar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnOrdenar.TabIndex = 21;
+            this.btnOrdenar.TabStop = false;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkOrange;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1500, 45);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Segoe Print", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(809, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(438, 98);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Especialidades";
+            // 
+            // btnContabilidad
+            // 
+            this.btnContabilidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContabilidad.Image = ((System.Drawing.Image)(resources.GetObject("btnContabilidad.Image")));
+            this.btnContabilidad.Location = new System.Drawing.Point(1410, 64);
+            this.btnContabilidad.Name = "btnContabilidad";
+            this.btnContabilidad.Size = new System.Drawing.Size(64, 55);
+            this.btnContabilidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnContabilidad.TabIndex = 23;
+            this.btnContabilidad.TabStop = false;
+            this.btnContabilidad.Click += new System.EventHandler(this.btnContabilidad_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Segoe Print", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(1262, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 35);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Contabilidad";
             // 
             // FormPedido
             // 
@@ -188,7 +301,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 800);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnContabilidad);
+            this.Controls.Add(this.pbClose2);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnOrdenar);
+            this.Controls.Add(this.btnNuevaOrden);
+            this.Controls.Add(this.btnTresCarnes);
+            this.Controls.Add(this.btnHawaiiana);
+            this.Controls.Add(this.btnPepperoni);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbPrecioTotal);
             this.Controls.Add(this.lbOrdenTresCarnes);
             this.Controls.Add(this.lbOrdenHawaiiana);
@@ -198,7 +320,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.lbTotal);
-            this.Controls.Add(this.pbClose2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPedido";
@@ -208,6 +329,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPepperoni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHawaiiana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTresCarnes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevaOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOrdenar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnContabilidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,6 +353,14 @@
         private System.Windows.Forms.Label lbOrdenHawaiiana;
         private System.Windows.Forms.Label lbOrdenTresCarnes;
         private System.Windows.Forms.Label lbPrecioTotal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox btnPepperoni;
+        private System.Windows.Forms.PictureBox btnHawaiiana;
+        private System.Windows.Forms.PictureBox btnTresCarnes;
+        private System.Windows.Forms.PictureBox btnNuevaOrden;
+        private System.Windows.Forms.PictureBox btnOrdenar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox btnContabilidad;
+        private System.Windows.Forms.Label label3;
     }
 }
