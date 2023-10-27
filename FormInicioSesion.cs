@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using biblioUsuario;
+using BibliotecaUsuario;
 using System.Windows.Forms;
 
 namespace PROYECTO_PIZZA

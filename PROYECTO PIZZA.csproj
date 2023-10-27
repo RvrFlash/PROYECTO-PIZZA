@@ -83,9 +83,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\biblioUsuario\biblioUsuario.csproj">
-      <Project>{adcd1e5e-67af-48e6-91e4-159fb14321e1}</Project>
-      <Name>biblioUsuario</Name>
+    <ProjectReference Include="BibliotecaContabilidad\BibliotecaContabilidad.csproj">
+      <Project>{3d365887-e661-4560-8d68-b6ed16bb4977}</Project>
+      <Name>BibliotecaContabilidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="BibliotecaUsuario\BibliotecaUsuario.csproj">
+      <Project>{9ee09d06-6b44-4c01-a7f1-f37c282c1714}</Project>
+      <Name>BibliotecaUsuario</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
