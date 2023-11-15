@@ -15,10 +15,8 @@ namespace BibliotecaContabilidad
 
 
         //Arreglo unidimensional que contiene el inventario de la tienda en porciones
-        //Se suponen porciones suficientes para 10 pizzas
+        //Se suponen porciones suficientes para 20 pizzas
         private int[] stockIngredientes = { 20, 20, 20, 20, 20, 20, 20 };
-        private string[] ingredientes = {"Masa", "Salsa de tomate", "Queso", "Pepperoni",
-                                          "Carne molida", "Jamón", "Piña"};
         #endregion
 
         #region Propiedades
@@ -56,9 +54,9 @@ namespace BibliotecaContabilidad
                     + pedido[1] * PorcionesTresCarnes[i]);
             }
 
-            for (int i = 0; i < StockIngredientes.Length; i++)
+            for (int i = 0; i < 7; i++)
             {
-                if (StockIngredientes[i] - misPizzas[i] <= 0)
+                if (StockIngredientes[i] - misPizzas[i] < 0)
                 {
                     return false;
                 }

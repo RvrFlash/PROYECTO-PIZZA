@@ -73,12 +73,13 @@ namespace PROYECTO_PIZZA
             lbOrdenHawaiiana.Text = miPedido[1].ToString();
             lbOrdenTresCarnes.Text = miPedido[2].ToString();
         }
-        #endregion
 
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
             FormContabilidad pantallaConta = new FormContabilidad(conta.TotalPedidos, conta.ConsultarStock());
             pantallaConta.Show();
+            this.Hide();
         }
+        #endregion
     }
 }

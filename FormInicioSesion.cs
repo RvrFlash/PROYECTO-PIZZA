@@ -44,6 +44,7 @@ namespace PROYECTO_PIZZA
                 {
                     FormPedido miPedido = new FormPedido();
                     miPedido.Show();
+                    this.Hide();
                     terminar = false;
                     break;
                 }
