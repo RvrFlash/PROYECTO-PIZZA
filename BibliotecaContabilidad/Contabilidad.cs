@@ -56,7 +56,7 @@ namespace BibliotecaContabilidad
 
             for (int i = 0; i < 7; i++)
             {
-                if (StockIngredientes[i] - misPizzas[i] < 0)
+                if ((StockIngredientes[i] - misPizzas[i]) < 0)
                 {
                     return false;
                 }

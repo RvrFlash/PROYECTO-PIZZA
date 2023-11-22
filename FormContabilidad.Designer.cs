@@ -49,11 +49,13 @@
             this.lbPorcionesJamon = new System.Windows.Forms.Label();
             this.lbPorcionesCarne = new System.Windows.Forms.Label();
             this.lbPorcionesPiña = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCalcular)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose2
@@ -291,12 +293,25 @@
             this.lbPorcionesPiña.TabIndex = 33;
             this.lbPorcionesPiña.Text = "20";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.White;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(12, 23);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(64, 55);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 34;
+            this.pictureBox8.TabStop = false;
+            // 
             // FormContabilidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1500, 800);
+            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.lbPorcionesPiña);
             this.Controls.Add(this.lbPorcionesJamon);
             this.Controls.Add(this.lbPorcionesCarne);
@@ -325,6 +340,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCalcular)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +368,6 @@
         private System.Windows.Forms.Label lbPorcionesJamon;
         private System.Windows.Forms.Label lbPorcionesCarne;
         private System.Windows.Forms.Label lbPorcionesPiña;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

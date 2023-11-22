@@ -12,7 +12,8 @@ namespace PROYECTO_PIZZA
         private double[] costosIngredientes = { 7.5, 14.25, 34.17, 46.5, 40, 30, 8 };
         private byte[] stockTotal = new byte[7];
         private double[] precios = { 150, 180, 200 };
-        private byte[] totalPedidos = { 0, 0, 0 };
+        private byte[] totalPedidos = new byte[3];
+        double[] gastosYGanancias = new double[5];
 
         private Boolean bandera = false;
         #endregion
@@ -37,23 +38,21 @@ namespace PROYECTO_PIZZA
         {
             Application.Exit();
         }
-
+        //Método que despliega el estado del negocio (contabilidad e inventario)
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double[] gastosYGanancias = new double[5];
             if (bandera == false)
             {
                 lbContaPepperoni.Text = totalPedidos[0].ToString();
                 lbContaHawaiiana.Text = totalPedidos[1].ToString();
                 lbContaTresCarnes.Text = totalPedidos[2].ToString();
                 gastosYGanancias = Estado(totalPedidos);
-                lbVentas.Text = gastosYGanancias[0].ToString();
-                lbGastos.Text = gastosYGanancias[1].ToString();
-                lbGananciaBruta.Text = gastosYGanancias[2].ToString();
-                lbImpuestos.Text = gastosYGanancias[3].ToString();
-                lbTotal.Text = gastosYGanancias[4].ToString();
 
-                //lbGananciaBruta.Text = "$" + Estado(totalPedidos).ToString();
+                lbVentas.Text = "$" + gastosYGanancias[0].ToString();
+                lbGastos.Text = "$" + gastosYGanancias[1].ToString();
+                lbGananciaBruta.Text = "$" + gastosYGanancias[2].ToString();
+                lbImpuestos.Text = "$" + gastosYGanancias[3].ToString();
+                lbTotal.Text = "$" + gastosYGanancias[4].ToString();
 
                 lbPorcionesMasa.Text = stockTotal[0].ToString();
                 lbPorcionesSalsa.Text = stockTotal[1].ToString();
@@ -69,6 +68,7 @@ namespace PROYECTO_PIZZA
             
         }
 
+        //Método que calcula el estado económico del negocio
         private double[] Estado(byte[] pedido)
         {
             double[] cuentas = new double[5];
