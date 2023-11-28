@@ -1,6 +1,7 @@
 ﻿using System;
 using BibliotecaContabilidad;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace PROYECTO_PIZZA
 {
@@ -8,6 +9,7 @@ namespace PROYECTO_PIZZA
     {
 
         #region Atributos
+        private Boolean m = false;
         Contabilidad conta2 = new Contabilidad();
         private double[] costosIngredientes = { 7.5, 14.25, 34.17, 46.5, 40, 30, 8 };
         private byte[] stockTotal = new byte[7];
@@ -24,12 +26,13 @@ namespace PROYECTO_PIZZA
             InitializeComponent();
             for (int i = 0; i < 3; i++)
             {
-                totalPedidos[i] = pedidos[i];
+                totalPedidos[i] += pedidos[i];
             }
             for (int i = 0; i < 7; i++)
             {
-                stockTotal[i] = stock[i];
+                stockTotal[i] += stock[i];
             }
+
         }
         #endregion
 
@@ -65,7 +68,6 @@ namespace PROYECTO_PIZZA
             }
             else
                 MessageBox.Show("Ya se realizó la contabilidad");
-            
         }
 
         //Método que calcula el estado económico del negocio
@@ -86,7 +88,28 @@ namespace PROYECTO_PIZZA
             cuentas[4] = cuentas[2]-cuentas[3];
             return cuentas;
         }
-        #endregion
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            FormPedido pantallaPedido = new FormPedido(totalPedidos);
+            pantallaPedido.Show();
+            this.Hide();
+        }
 
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = true;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m)
+                this.Location = Cursor.Position;
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = false;
+        }
+        #endregion
     }
 }

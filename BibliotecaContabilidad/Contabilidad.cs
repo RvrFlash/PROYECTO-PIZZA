@@ -51,7 +51,7 @@ namespace BibliotecaContabilidad
             {
                 misPizzas[i] = (byte)(pedido[0] * PorcionesPepperoni[i]
                     + pedido[1] * PorcionesHawaiiana[i]
-                    + pedido[1] * PorcionesTresCarnes[i]);
+                    + pedido[2] * PorcionesTresCarnes[i]);
             }
 
             for (int i = 0; i < 7; i++)

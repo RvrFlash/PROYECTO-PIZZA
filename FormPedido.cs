@@ -10,6 +10,7 @@ namespace PROYECTO_PIZZA
         //Variable que almacena la cantidad y tipo de pizzas en un mismo pedido
         private byte[] miPedido;
         Contabilidad conta = new Contabilidad();
+        private Boolean m = false;
         #endregion
 
         #region Constructor
@@ -17,6 +18,13 @@ namespace PROYECTO_PIZZA
         {
             InitializeComponent();
             miPedido = new byte[3];
+        }
+
+        public FormPedido(byte[] totalPedidos)
+        {
+            InitializeComponent();
+            miPedido = new byte[3];
+            conta.ActualizarStock(totalPedidos);
         }
         #endregion
 
@@ -32,12 +40,14 @@ namespace PROYECTO_PIZZA
             {
                 miPedido[0] += 1;
                 MostrarPedido();
-                if(pbPaso1.Visible==false)
+                if(pbPaso1.Visible == false)
                     pbPaso1.Visible = true;
             }
             else
+            {
                 MessageBox.Show("Se ha alcanzado el límite del inventario");
-
+                pbPaso1.Visible = false;
+            }
         }
         private void btnHawaiiana_Click(object sender, EventArgs e)
         {
@@ -49,7 +59,10 @@ namespace PROYECTO_PIZZA
                     pbPaso1.Visible = true;
             }
             else
+            {
                 MessageBox.Show("Se ha alcanzado el límite del inventario");
+                pbPaso1.Visible = false;
+            }
         }
 
         private void btnTresCarnes_Click(object sender, EventArgs e)
@@ -62,23 +75,33 @@ namespace PROYECTO_PIZZA
                     pbPaso1.Visible = true;
             }
             else
+            {
                 MessageBox.Show("Se ha alcanzado el límite del inventario");
+                pbPaso1.Visible = false;
+            }
         }
 
         //Método que realiza la orden de un pedido e imprime el precio a pagar
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
-            if (conta.VerificarStock(miPedido))
+            if (miPedido[0] + miPedido[1] + miPedido[2] != 0)
             {
-                conta.ActualizarStock(miPedido);
-                lbPrecioTotal.Text ="$" + conta.Precios(miPedido).ToString() + ".00";
-                pbPaso2.Visible = true;
+                if (conta.VerificarStock(miPedido))
+                {
+                    conta.ActualizarStock(miPedido);
+                    lbPrecioTotal.Text = "$" + conta.Precios(miPedido).ToString() + ".00";
+                    pbPaso2.Visible = true;
+                    MessageBox.Show("El pedido se realizó de forma exitosa");
+                }
+                else
+                {
+                    MessageBox.Show(" Ya no hay suficientes ingredientes");
+                }
+                conta.Total = 0;
             }
             else
-            {
-                MessageBox.Show(" Ya no hay suficientes ingredientes");
-            }
-            conta.Total = 0;
+                MessageBox.Show("Debes agregar al menos un producto");
+            
         }
 
         private void MostrarPedido()
@@ -118,6 +141,20 @@ namespace PROYECTO_PIZZA
             FormContabilidad pantallaConta = new FormContabilidad(conta.TotalPedidos, conta.ConsultarStock());
             pantallaConta.Show();
             this.Hide();
+        }
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = true;
+        }
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m)
+                this.Location = Cursor.Position;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = false;
         }
         #endregion
     }

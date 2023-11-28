@@ -45,7 +45,6 @@
             this.btnTresCarnes = new System.Windows.Forms.PictureBox();
             this.btnNuevaOrden = new System.Windows.Forms.PictureBox();
             this.btnOrdenar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnContabilidad = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.pbPaso1 = new System.Windows.Forms.PictureBox();
             this.pbPaso2 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -65,12 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTresCarnes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevaOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrdenar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContabilidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaso1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaso2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose2
@@ -259,16 +259,6 @@
             this.btnOrdenar.TabStop = false;
             this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkOrange;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1500, 45);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -375,6 +365,19 @@
             this.pictureBox7.TabIndex = 27;
             this.pictureBox7.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkOrange;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1500, 45);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
             // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -420,12 +423,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTresCarnes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuevaOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrdenar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContabilidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaso1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaso2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,7 +451,6 @@
         private System.Windows.Forms.PictureBox btnTresCarnes;
         private System.Windows.Forms.PictureBox btnNuevaOrden;
         private System.Windows.Forms.PictureBox btnOrdenar;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnContabilidad;
         private System.Windows.Forms.Label label3;
@@ -458,5 +460,6 @@
         private System.Windows.Forms.PictureBox pbPaso1;
         private System.Windows.Forms.PictureBox pbPaso2;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -48,11 +48,17 @@ namespace PROYECTO_PIZZA
                     terminar = false;
                     break;
                 }
+                if (txtbUsuario.Text == "" || txtbContraseña.Text == "")
+                {
+                    MessageBox.Show("Favor de llenar todos los campos");
+                    terminar = false;
+                    break;
+                }
             }
 
             if (terminar)
             {
-                MessageBox.Show("usuario o contraseña incorrectos");
+                MessageBox.Show("Usuario y/o contraseña incorrecta");
             }
         }
         #endregion
