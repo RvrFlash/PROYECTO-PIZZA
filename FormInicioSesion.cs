@@ -48,7 +48,7 @@ namespace PROYECTO_PIZZA
                     terminar = false;
                     break;
                 }
-                if (txtbUsuario.Text == "" || txtbContraseña.Text == "")
+                if (string.IsNullOrEmpty(txtbUsuario.Text) || string.IsNullOrEmpty(txtbContraseña.Text))
                 {
                     MessageBox.Show("Favor de llenar todos los campos");
                     terminar = false;
